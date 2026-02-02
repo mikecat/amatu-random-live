@@ -1,0 +1,112 @@
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+#body-wrapper {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0.5em 1em;
+}
+
+#main-title {
+	margin: 0;
+	padding: 0;
+}
+
+#version-wrapper {
+	margin-top: 0.75em;
+	margin-bottom: 0.75em;
+}
+
+#song-wrapper {
+	margin-bottom: 0.5em;
+}
+
+#song-area, #idol-brand-area {
+	text-align: center;
+	white-space: nowrap;
+}
+
+#idol-details {
+	margin-top: 0.25em;
+}
+
+#pick-button-wrapper {
+	margin-top: 0.75em;
+	margin-bottom: 0.75em;
+}
+
+#pick-button {
+	width: 12em;
+	height: 3.5em;
+	margin-bottom: 0.25em;
+}
+
+#pick-button-text {
+	font-size: 200%;
+}
+
+#result-area {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	--border-style: 1px solid currentcolor;
+	border-left: var(--border-style);
+	border-top: var(--border-style);
+	width: 100%;
+}
+
+#result-area > div {
+	border-right: var(--border-style);
+	border-bottom: var(--border-style);
+	padding: 0.25em 0.125em;
+	text-align: center;
+}
+
+#result-song-label {
+	grid-row: 1;
+}
+
+#result-song {
+	grid-row: 2;
+}
+
+#result-left-label, #result-center-label, #result-right-label {
+	grid-row: 3;
+}
+
+#result-left, #result-center, #result-right {
+	grid-row: 4;
+}
+
+#result-song-label, #result-song {
+	grid-column: 1 / span 3;
+}
+
+#result-left-label, #result-left {
+	grid-column: 1;
+}
+
+#result-center-label, #result-center {
+	grid-column: 2;
+}
+
+#result-right-label, #result-right {
+	grid-column: 3;
+}
+
+#post-button-wrapper {
+	margin-top: 0.75em;
+}
+
+#post-button {
+	padding: 0.75em 1.5em;
+}
+
+#post-button-text {
+	font-size: 120%;
+}
