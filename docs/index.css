@@ -6,52 +6,66 @@ body {
 	padding: 0;
 }
 
-#body-wrapper {
+#bodyWrapper {
 	display: inline-flex;
 	flex-direction: column;
 	align-items: center;
 	padding: 0.5em 1em;
 }
 
-#main-title {
+#mainTitle {
 	margin: 0;
 	padding: 0;
 }
 
-#version-wrapper {
+#versionWrapper {
 	margin-top: 0.75em;
 	margin-bottom: 0.75em;
 }
 
-#song-wrapper {
+#songWrapper {
 	margin-bottom: 0.5em;
 }
 
-#song-area, #idol-brand-area {
+.candidateCategories {
 	text-align: center;
 	white-space: nowrap;
 }
 
-#idol-details {
+.candidateCategories > label:not(:last-child) {
+	margin-right: 0.5em;
+}
+
+.detailedCandidates {
 	margin-top: 0.25em;
 }
 
-#pick-button-wrapper {
+.detailTitle {
+	margin-top: 0.25em;
+	white-space: nowrap;
+}
+
+.detailList {
+	margin-left: 1em;
+	white-space: nowrap;
+}
+
+#pickButtonWrapper {
 	margin-top: 0.75em;
 	margin-bottom: 0.75em;
 }
 
-#pick-button {
+#pickButton {
 	width: 12em;
 	height: 3.5em;
 	margin-bottom: 0.25em;
 }
 
-#pick-button-text {
+#pickButtonText {
 	font-size: 200%;
 }
 
-#result-area {
+#resultArea {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	--border-style: 1px solid currentcolor;
@@ -60,53 +74,53 @@ body {
 	width: 100%;
 }
 
-#result-area > div {
+#resultArea > div {
 	border-right: var(--border-style);
 	border-bottom: var(--border-style);
 	padding: 0.25em 0.125em;
 	text-align: center;
 }
 
-#result-song-label {
+#resultSongLabel {
 	grid-row: 1;
 }
 
-#result-song {
+#resultSong {
 	grid-row: 2;
 }
 
-#result-left-label, #result-center-label, #result-right-label {
+#resultLeftLabel, #resultCenterLabel, #resultRightLabel {
 	grid-row: 3;
 }
 
-#result-left, #result-center, #result-right {
+#resultLeft, #resultCenter, #resultRight {
 	grid-row: 4;
 }
 
-#result-song-label, #result-song {
+#resultSongLabel, #resultSong {
 	grid-column: 1 / span 3;
 }
 
-#result-left-label, #result-left {
+#resultLeftLabel, #resultLeft {
 	grid-column: 1;
 }
 
-#result-center-label, #result-center {
+#resultCenterLabel, #resultCenter {
 	grid-column: 2;
 }
 
-#result-right-label, #result-right {
+#resultRightLabel, #resultRight {
 	grid-column: 3;
 }
 
-#post-button-wrapper {
+#postButtonWrapper {
 	margin-top: 0.75em;
 }
 
-#post-button {
+#postButton {
 	padding: 0.75em 1.5em;
 }
 
-#post-button-text {
+#postButtonText {
 	font-size: 120%;
 }

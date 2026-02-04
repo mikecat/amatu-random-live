@@ -5,90 +5,60 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>あまつランダムライブ</title>
 		<link rel="stylesheet" href="index.css">
+		<script src="arl.js"></script>
 	</head>
 	<body>
-		<div id="body-wrapper">
-			<h1 id="main-title">あまつランダムライブ</h1>
-			<div id="version-wrapper">
-				対応バージョン：<span id="version-display"></span>
+		<div id="bodyWrapper">
+			<h1 id="mainTitle">あまつランダムライブ</h1>
+			<div id="versionWrapper">
+				対応バージョン：<span id="versionDisplay"></span>
 			</div>
 			<div>
-				<fieldset id="song-wrapper" disabled>
+				<fieldset id="songWrapper" disabled>
 					<legend>候補となる楽曲</legend>
-					<div id="song-area">
-						<label for="song-woman">
-							<input type="checkbox" id="song-woman" checked>
-							女性楽曲
-						<label>
-						<label for="song-man">
-							<input type="checkbox" id="song-man" checked>
-							男性楽曲
-						<label>
-						<label for="song-woman-man">
-							<input type="checkbox" id="song-woman-man" checked>
-							女性・男性楽曲
-						<label>
+					<div id="songCategory" class="candidateCategories">
 					</div>
-				</fieldset>
-				<fieldset id="idol-wrapper" disabled>
-					<legend>候補となるアイドル</legend>
-					<div id="idol-brand-area">
-						<label for="idol-as">
-							<input type="checkbox" id="idol-as" checked>
-							AS
-						</label>
-						<label for="idol-cinderella">
-							<input type="checkbox" id="idol-cinderella" checked>
-							デレ
-						</label>
-						<label for="idol-million">
-							<input type="checkbox" id="idol-million" checked>
-							ミリ
-						</label>
-						<label for="idol-sidem">
-							<input type="checkbox" id="idol-sidem" checked>
-							M
-						</label>
-						<label for="idol-shiny">
-							<input type="checkbox" id="idol-shiny" checked>
-							シャニ
-						</label>
-						<label for="idol-gakuen">
-							<input type="checkbox" id="idol-gakuen" checked>
-							学園
-						</label>
-					</div>
-					<details id="idol-details">
+					<details class="detailedCandidates">
 						<summary>詳細</summary>
-						<div id="idol-chooser">
+						<div id="songChooser">
+						</div>
+					</details>
+				</fieldset>
+				<fieldset id="idolWrapper" disabled>
+					<legend>候補となるアイドル</legend>
+					<div id="idolCategory" class="candidateCategories">
+					</div>
+					<details class="detailedCandidates">
+						<summary>詳細</summary>
+						<div id="idolChooser">
 						</div>
 					</details>
 				</fieldset>
 			</div>
-			<div id="pick-button-wrapper">
-				<button id="pick-button" type="button" disabled>
-					<span id="pick-button-text">抽選！</span>
+			<div id="pickButtonWrapper">
+				<button id="pickButton" type="button" disabled>
+					<span id="pickButtonText">抽選！</span>
 				</button>
 				<br>
-				<label for="play-effect">
-					<input type="checkbox" id="play-effect" checked>
+				<label for="playEffect">
+					<input type="checkbox" id="playEffect" checked>
 						演出を再生する
 					</input>
 				</label>
 			</div>
-			<div id="result-area">
-				<div id="result-song-label">楽曲</div>
-				<div id="result-song">？？？？</div>
-				<div id="result-left-label">レフト</div>
-				<div id="result-left">？？？？</div>
-				<div id="result-center-label">センター</div>
-				<div id="result-center">？？？？</div>
-				<div id="result-right-label">ライト</div>
-				<div id="result-right">？？？？</div>
+			<div id="resultArea">
+				<div id="resultSongLabel">楽曲</div>
+				<div id="resultSong">？？？？</div>
+				<div id="resultLeftLabel">レフト</div>
+				<div id="resultLeft">？？？？</div>
+				<div id="resultCenterLabel">センター</div>
+				<div id="resultCenter">？？？？</div>
+				<div id="resultRightLabel">ライト</div>
+				<div id="resultRight">？？？？</div>
 			</div>
-			<div id="post-button-wrapper">
-				<button id="post-button" type="button" disabled>
-					<span id="post-button-text">抽選結果をポスト (ツイート)<span.
+			<div id="postButtonWrapper">
+				<button id="postButton" type="button" disabled>
+					<span id="postButtonText">抽選結果をポスト (ツイート)<span.
 				</button>
 			</div>
 		</div>
