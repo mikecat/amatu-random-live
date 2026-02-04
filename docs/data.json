@@ -5,31 +5,31 @@
 			"name": "女性楽曲",
 			"tags": ["woman"],
 			"songs": [
-				"THE IDOLM@STER",
-				"お願い！シンデレラ",
-				"Thank You！",
-				"Spread the Wings!!",
-				"初",
-				"M@STERPIECE",
-				"READY!!",
-				"Shine!!",
-				"UNION!!"
+				{ "name": "THE IDOLM@STER", "id": "s1a" },
+				{ "name": "お願い！シンデレラ", "id": "s1b" },
+				{ "name": "Thank You！", "id": "s1c" },
+				{ "name": "Spread the Wings!!", "id": "s1d" },
+				{ "name": "初", "id": "s2a" },
+				{ "name": "M@STERPIECE", "id": "s3a" },
+				{ "name": "READY!!", "id": "s3c" },
+				{ "name": "Shine!!", "id": "s4a" },
+				{ "name": "UNION!!", "id": "s4b" }
 			]
 		},
 		{
 			"name": "男性楽曲",
 			"tags": ["man"],
 			"songs": [
-				"DRIVE A LIVE",
-				"Beyond The Dream"
+				{ "name": "DRIVE A LIVE", "id": "s1e" },
+				{ "name": "Beyond The Dream", "id": "s3b" }
 			]
 		},
 		{
 			"name": "女性・男性楽曲",
 			"tags": ["woman", "man"],
 			"songs": [
-				"なんどでも笑おう",
-				"VOY@GER"
+				{ "name": "なんどでも笑おう", "id": "s1f" },
+				{ "name": "VOY@GER", "id": "s1g" }
 			]
 		}
 	],
@@ -39,10 +39,10 @@
 			"shortName": "AS",
 			"tags": ["as", "woman"],
 			"idols": [
-				"天海 春香",
-				"如月 千早",
-				"星井 美希",
-				"水瀬 伊織"
+				{ "name": "天海 春香", "id": "i1a" },
+				{ "name": "如月 千早", "id": "i1b" },
+				{ "name": "星井 美希", "id": "i1c" },
+				{ "name": "水瀬 伊織", "id": "i3a" }
 			]
 		},
 		{
@@ -50,10 +50,10 @@
 			"shortName": "デレ",
 			"tags": ["cinderella", "woman"],
 			"idols": [
-				"島村 卯月",
-				"渋谷 凛",
-				"本田 未央",
-				"神崎 蘭子"
+				{ "name": "島村 卯月", "id": "i1d" },
+				{ "name": "渋谷 凛", "id": "i1e" },
+				{ "name": "本田 未央", "id": "i1f" },
+				{ "name": "神崎 蘭子", "id": "i4a" }
 			]
 		},
 		{
@@ -61,10 +61,10 @@
 			"shortName": "ミリ",
 			"tags": ["million", "woman"],
 			"idols": [
-				"春日 未来",
-				"最上 静香",
-				"伊吹 翼",
-				"真壁 瑞希"
+				{ "name": "春日 未来", "id": "i1g" },
+				{ "name": "最上 静香", "id": "i1h" },
+				{ "name": "伊吹 翼", "id": "i1i" },
+				{ "name": "真壁 瑞希", "id": "i4b" }
 			]
 		},
 		{
@@ -72,10 +72,10 @@
 			"shortName": "M",
 			"tags": ["sidem", "man"],
 			"idols": [
-				"天道 輝",
-				"桜庭 薫",
-				"柏木 翼",
-				"硲 道夫"
+				{ "name": "天道 輝", "id": "i1j" },
+				{ "name": "桜庭 薫", "id": "i1k" },
+				{ "name": "柏木 翼", "id": "i1l" },
+				{ "name": "硲 道夫", "id": "i3b" }
 			]
 		},
 		{
@@ -83,9 +83,9 @@
 			"shortName": "シャニ",
 			"tags": ["shiny", "woman"],
 			"idols": [
-				"櫻木 真乃",
-				"風野 灯織",
-				"八宮 めぐる"
+				{ "name": "櫻木 真乃", "id": "i1m" },
+				{ "name": "風野 灯織", "id": "i1n" },
+				{ "name": "八宮 めぐる", "id": "i1o" }
 			]
 		},
 		{
@@ -93,9 +93,9 @@
 			"shortName": "学",
 			"tags": ["gakuen", "woman"],
 			"idols": [
-				"花海 咲季",
-				"月村 手毬",
-				"藤田 ことね"
+				{ "name": "花海 咲季", "id": "i2a" },
+				{ "name": "月村 手毬", "id": "i2b" },
+				{ "name": "藤田 ことね", "id": "i2c" }
 			]
 		}
 	]
