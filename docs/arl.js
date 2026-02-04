@@ -154,10 +154,59 @@ window.addEventListener("DOMContentLoaded", async () => {
 		}
 	};
 
-	// TODO: localStorage からチェック状態を読み込む
+	// localStorage からチェック状態を読み込む
+	const LOCAL_STORAGE_KEY = "amatu-random-live-b65e3e02-4adb-428d-9876-8fa83a760863";
+	let disableLocalStorage = false;
+	try {
+		const data = localStorage.getItem(LOCAL_STORAGE_KEY);
+		if (data !== null) {
+			const dataParsed = JSON.parse(data);
+			if (dataParsed) {
+				if (typeof dataParsed.candidates === "object" && dataParsed.candidates !== null) {
+					const candidatesMap = new Map();
+					Object.entries(dataParsed.candidates).forEach(([key, value]) => {
+						candidatesMap.set(key, value);
+					});
+					songObjects.concat(idolObjects).forEach((detailObject) => {
+						const checked = candidatesMap.get(detailObject.id);
+						if (typeof checked === "boolean") {
+							detailObject.checkBox.checked = checked;
+						}
+					});
+				}
+				if (typeof dataParsed.options === "object" && dataParsed.options !== null) {
+					const options = dataParsed.options;
+					if (typeof options.playEffect === "boolean") {
+						es.playEffect.checked = options.playEffect;
+					}
+				}
+			}
+		}
+	} catch (error) {
+		console.warn(error);
+		disableLocalStorage = true;
+	}
 
+	// localStorage にチェック状態を書き込む
 	const saveChecksToLocalStorage = () => {
-		// TODO: localStorage にチェック状態を書き込む
+		if (disableLocalStorage) return;
+		try {
+			const candidates = {};
+			songObjects.concat(idolObjects).forEach((detailObject) => {
+				candidates[detailObject.id] = detailObject.checkBox.checked;
+			});
+			localStorage.setItem(
+				LOCAL_STORAGE_KEY,
+				JSON.stringify({
+					candidates,
+					options: {
+						playEffect: es.playEffect.checked,
+					},
+				}),
+			);
+		} catch (error) {
+			console.warn(error);
+		}
 	};
 
 	const buildCandidatesToPick = () => {
@@ -179,6 +228,9 @@ window.addEventListener("DOMContentLoaded", async () => {
 			buildCandidatesToPick();
 			saveChecksToLocalStorage();
 		});
+	});
+	es.playEffect.addEventListener("change", () => {
+		saveChecksToLocalStorage();
 	});
 
 	// 読み込みが完了したので、操作を解禁する
