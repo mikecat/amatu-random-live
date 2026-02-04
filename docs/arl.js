@@ -209,9 +209,37 @@ window.addEventListener("DOMContentLoaded", async () => {
 		}
 	};
 
+	const candidatesToPick = [];
+
+	// ランダム選択の候補リストを構築する
 	const buildCandidatesToPick = () => {
-		// TODO
-		es.pickButton.disabled = false; // TODO: 候補がある場合のみ有効化する
+		candidatesToPick.splice(0);
+		songCategoryObjects.forEach((songCategory) => {
+			// この曲カテゴリで選べるアイドルのリストを構築する
+			const candidateIdols = [];
+			idolCategoryObjects.forEach((idolCategory) => {
+				// 曲カテゴリのタグとアイドルカテゴリのタグに共通部分がある場合のみ、使用可能
+				if (songCategory.tags.some((tag) => idolCategory.tags.has(tag))) {
+					// カテゴリ内のアイドルについて、有効化状態をチェックする
+					idolCategory.details.forEach((idol) => {
+						if (idol.checkBox.checked) candidateIdols.push(idol.name);
+					});
+				}
+			});
+			// 選べるアイドルが3人以上の場合のみ、この曲カテゴリの曲を候補にする
+			if (candidateIdols.length >= 3) {
+				songCategory.details.forEach((song) => {
+					if (song.checkBox.checked) {
+						candidatesToPick.push({
+							songName: song.name,
+							idols: candidateIdols,
+						});
+					}
+				});
+			}
+		});
+		// 選べる曲がある場合のみ、抽選ボタンを有効化する
+		es.pickButton.disabled = candidatesToPick.length === 0;
 	};
 
 	songCategoryObjects.concat(idolCategoryObjects).forEach((categoryObject) => {
