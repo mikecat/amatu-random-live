@@ -1,78 +1,102 @@
 {
 	"version": "第4弾 (1.4.0)",
 	"songs": [
-		{ "name": "THE IDOLM@STER", "category": "woman" },
-		{ "name": "お願い！シンデレラ", "category": "woman" },
-		{ "name": "Thank You！", "category": "woman" },
-		{ "name": "DRIVE A LIVE", "category": "man" },
-		{ "name": "Spread the Wings!!", "category": "woman" },
-		{ "name": "なんどでも笑おう", "category": "woman-man" },
-		{ "name": "VOY@GER", "category": "woman-man" },
-		{ "name": "初", "category": "woman" },
-		{ "name": "M@STERPIECE", "category": "woman" },
-		{ "name": "Beyond The Dream", "category": "man" },
-		{ "name": "READY!!", "category": "woman" },
-		{ "name": "Shine!!", "category": "woman" },
-		{ "name": "UNION!!", "category": "woman" }
-	],
-	"idols": {
-		"as": {
-			"name": "AS",
-			"shortName": "AS",
-			"idols": [
-				{ "name": "天海 春香", "category": "woman" },
-				{ "name": "如月 千早", "category": "woman" },
-				{ "name": "星井 美希", "category": "woman" },
-				{ "name": "水瀬 伊織", "category": "woman" }
+		{
+			"name": "女性楽曲",
+			"tags": ["woman"],
+			"songs": [
+				"THE IDOLM@STER",
+				"お願い！シンデレラ",
+				"Thank You！",
+				"Spread the Wings!!",
+				"初",
+				"M@STERPIECE",
+				"READY!!",
+				"Shine!!",
+				"UNION!!"
 			]
 		},
-		"cinderella": {
-			"name": "シンデレラガールズ",
-			"shortName": "デレ",
-			"idols": [
-				{ "name": "島村 卯月", "category": "woman" },
-				{ "name": "渋谷 凛", "category": "woman" },
-				{ "name": "本田 未央", "category": "woman" },
-				{ "name": "神崎 蘭子", "category": "woman" }
+		{
+			"name": "男性楽曲",
+			"tags": ["man"],
+			"songs": [
+				"DRIVE A LIVE",
+				"Beyond The Dream"
 			]
 		},
-		"million": {
-			"name": "ミリオンライブ！",
-			"shortName": "ミリ",
-			"idols": [
-				{ "name": "春日 未来", "category": "woman" },
-				{ "name": "最上 静香", "category": "woman" },
-				{ "name": "伊吹 翼", "category": "woman" },
-				{ "name": "真壁 瑞希", "category": "woman" }
-			]
-		},
-		"sidem": {
-			"name": "SideM",
-			"shortName": "M",
-			"idols": [
-				{ "name": "天道 輝", "category": "man" },
-				{ "name": "桜庭 薫", "category": "man" },
-				{ "name": "柏木 翼", "category": "man" },
-				{ "name": "硲 道夫", "category": "man" }
-			]
-		},
-		"shiny": {
-			"name": "シャイニーカラーズ",
-			"shortName": "シャニ",
-			"idols": [
-				{ "name": "櫻木 真乃", "category": "woman" },
-				{ "name": "風野 灯織", "category": "woman" },
-				{ "name": "八宮 めぐる", "category": "woman" }
-			]
-		},
-		"gakuen": {
-			"name": "学園アイドルマスター",
-			"shortName": "学園",
-			"idols": [
-				{ "name": "花海 咲季", "category": "woman" },
-				{ "name": "月村 手毬", "category": "woman" },
-				{ "name": "藤田 ことね", "category": "woman" }
+		{
+			"name": "女性・男性楽曲",
+			"tags": ["woman", "man"],
+			"songs": [
+				"なんどでも笑おう",
+				"VOY@GER"
 			]
 		}
-	}
+	],
+	"idols": [
+		{
+			"name": "AS",
+			"shortName": "AS",
+			"tags": ["as", "woman"],
+			"idols": [
+				"天海 春香",
+				"如月 千早",
+				"星井 美希",
+				"水瀬 伊織"
+			]
+		},
+		{
+			"name": "シンデレラガールズ",
+			"shortName": "デレ",
+			"tags": ["cinderella", "woman"],
+			"idols": [
+				"島村 卯月",
+				"渋谷 凛",
+				"本田 未央",
+				"神崎 蘭子"
+			]
+		},
+		{
+			"name": "ミリオンライブ！",
+			"shortName": "ミリ",
+			"tags": ["million", "woman"],
+			"idols": [
+				"春日 未来",
+				"最上 静香",
+				"伊吹 翼",
+				"真壁 瑞希"
+			]
+		},
+		{
+			"name": "SideM",
+			"shortName": "M",
+			"tags": ["sidem", "man"],
+			"idols": [
+				"天道 輝",
+				"桜庭 薫",
+				"柏木 翼",
+				"硲 道夫"
+			]
+		},
+		{
+			"name": "シャイニーカラーズ",
+			"shortName": "シャニ",
+			"tags": ["shiny", "woman"],
+			"idols": [
+				"櫻木 真乃",
+				"風野 灯織",
+				"八宮 めぐる"
+			]
+		},
+		{
+			"name": "学園アイドルマスター",
+			"shortName": "学",
+			"tags": ["gakuen", "woman"],
+			"idols": [
+				"花海 咲季",
+				"月村 手毬",
+				"藤田 ことね"
+			]
+		}
+	]
 }
