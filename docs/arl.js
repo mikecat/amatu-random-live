@@ -261,8 +261,124 @@ window.addEventListener("DOMContentLoaded", async () => {
 		saveChecksToLocalStorage();
 	});
 
+	const randUint32 = () => {
+		if (crypto && crypto.getRandomValues) {
+			const ua = new Uint32Array(1);
+			crypto.getRandomValues(ua);
+			return ua[0];
+		} else {
+			return (Math.random() * 0x100000000) >>> 0;
+		}
+	};
+
+	// [0, maxValue) のランダムな整数を返す (0 < maxValue <= 0x100000000)
+	const randInt = (maxValue) => {
+		const numDrop = 0x100000000 - 0x100000000 % maxValue;
+		for (;;) {
+			const value = randUint32();
+			if (value < numDrop) return value % maxValue;
+		}
+	};
+
+	// [0, maxValue) の適当な整数を返す
+	const randIntSimple = (maxValue) => {
+		return Math.floor(Math.random() * maxValue);
+	};
+
+	let pickResult = null;
+	let animationStartTime = null;
+	let animationPrevCount = 0;
+
+	const pickResultAnimation = () => {
+		const currentTime = performance.now() - animationStartTime;
+		const currentCount = Math.floor(currentTime / 100);
+		if (currentCount !== animationPrevCount) {
+			const randomSong = currentCount < 10
+				? candidatesToPick[randIntSimple(candidatesToPick.length)]
+				: pickResult.song;
+			let idolCandidates = randomSong.idols;
+			const centerIdol = currentCount < 20
+				? idolCandidates[randIntSimple(idolCandidates.length)]
+				: pickResult.idols.center;
+			idolCandidates = idolCandidates.filter((e) => e !== centerIdol);
+			const leftIdol = currentCount < 23
+				? idolCandidates[randIntSimple(idolCandidates.length)]
+				: pickResult.idols.left;
+			idolCandidates = idolCandidates.filter((e) => e !== leftIdol);
+			const rightIdol = currentCount < 26
+				? idolCandidates[randIntSimple(idolCandidates.length)]
+				: pickResult.idols.right;
+			es.resultSong.textContent = randomSong.songName;
+			es.resultLeft.textContent = leftIdol;
+			es.resultCenter.textContent = centerIdol;
+			es.resultRight.textContent = rightIdol;
+		}
+		if (currentCount < 26) {
+			requestAnimationFrame(pickResultAnimation);
+		} else {
+			animationStartTime = null;
+			es.songWrapper.disabled = false;
+			es.idolWrapper.disabled = false;
+			es.pickButton.disabled = false;
+			es.playEffect.disabled = false;
+			es.postButton.disabled = false;
+		}
+	};
+
+	es.pickButton.addEventListener("click", () => {
+		if (candidatesToPick.length === 0 || animationStartTime !== null) return;
+		const song = candidatesToPick[randInt(candidatesToPick.length)];
+		const idolCandidates = song.idols.concat();
+		const idolPicked = [];
+		for (let i = 0; i < 3; i++) {
+			const pickedIndex = randInt(idolCandidates.length);
+			idolPicked.push(idolCandidates[pickedIndex]);
+			idolCandidates.splice(pickedIndex, 1);
+		}
+		pickResult = {
+			song: song,
+			idols: {
+				left: idolPicked[0],
+				center: idolPicked[1],
+				right: idolPicked[2],
+			},
+		};
+		if (es.playEffect.checked) {
+			es.songWrapper.disabled = true;
+			es.idolWrapper.disabled = true;
+			es.pickButton.disabled = true;
+			es.playEffect.disabled = true;
+			es.postButton.disabled = true;
+			animationStartTime = performance.now();
+			animationPrevCount = -1;
+			requestAnimationFrame(pickResultAnimation);
+		} else {
+			es.resultSong.textContent = pickResult.song.songName;
+			es.resultLeft.textContent = pickResult.idols.left;
+			es.resultCenter.textContent = pickResult.idols.center;
+			es.resultRight.textContent = pickResult.idols.right;
+			es.postButton.disabled = false;
+		}
+	});
+
+	es.postButton.addEventListener("click", () => {
+		if (pickResult === null) return;
+		const appUrl = location.origin + location.pathname;
+		const postText =
+			"楽曲：" + pickResult.song.songName + "\n\n" +
+			"レフト：" + pickResult.idols.left + "\n" +
+			"センター：" + pickResult.idols.center + "\n" +
+			"ライト：" + pickResult.idols.right + "\n\n" +
+			"#あまつランダムライブ\n" +
+			appUrl + "\n";
+		const intentUrl = new URL("https://twitter.com/intent/tweet");
+		intentUrl.searchParams.append("text", postText.replace(/@/g, "@\u200b"));
+		window.open(intentUrl.href, "_blank","noopener");
+	});
+
 	// 読み込みが完了したので、操作を解禁する
 	es.songWrapper.disabled = false;
 	es.idolWrapper.disabled = false;
+	es.playEffect.disabled = false;
 	buildCandidatesToPick();
 });
