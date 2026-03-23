@@ -1,5 +1,5 @@
 {
-	"version": "第4弾 (1.4.0)",
+	"version": "第4弾+追加楽曲 (1.4.1)",
 	"songs": [
 		{
 			"name": "女性楽曲",
@@ -21,7 +21,8 @@
 			"tags": ["man"],
 			"songs": [
 				{ "name": "DRIVE A LIVE", "id": "s1e" },
-				{ "name": "Beyond The Dream", "id": "s3b" }
+				{ "name": "Beyond The Dream", "id": "s3b" },
+				{ "name": "STARLIGHT CELEBRATE!", "id": "s4c" }
 			]
 		},
 		{
