@@ -371,7 +371,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 			"ライト：" + pickResult.idols.right + "\n\n" +
 			"#あまつランダムライブ\n" +
 			appUrl + "\n";
-		const intentUrl = new URL("https://twitter.com/intent/tweet");
+		const intentUrl = new URL("https://x.com/intent/post");
 		intentUrl.searchParams.append("text", postText.replace(/@/g, "@\u200b"));
 		window.open(intentUrl.href, "_blank","noopener");
 	});
