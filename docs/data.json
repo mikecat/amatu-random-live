@@ -1,5 +1,5 @@
 {
-	"version": "第4弾+追加楽曲 (1.4.1)",
+	"version": "第5弾 (1.5.1)",
 	"songs": [
 		{
 			"name": "女性楽曲",
@@ -13,7 +13,9 @@
 				{ "name": "M@STERPIECE", "id": "s3a" },
 				{ "name": "READY!!", "id": "s3c" },
 				{ "name": "Shine!!", "id": "s4a" },
-				{ "name": "UNION!!", "id": "s4b" }
+				{ "name": "UNION!!", "id": "s4b" },
+				{ "name": "Ambitious Eve", "id": "s5a" },
+				{ "name": "Campus mode!!", "id": "s5b" }
 			]
 		},
 		{
@@ -86,7 +88,8 @@
 			"idols": [
 				{ "name": "櫻木 真乃", "id": "i1m" },
 				{ "name": "風野 灯織", "id": "i1n" },
-				{ "name": "八宮 めぐる", "id": "i1o" }
+				{ "name": "八宮 めぐる", "id": "i1o" },
+				{ "name": "小宮 果穂", "id": "i5a" }
 			]
 		},
 		{
@@ -96,7 +99,8 @@
 			"idols": [
 				{ "name": "花海 咲季", "id": "i2a" },
 				{ "name": "月村 手毬", "id": "i2b" },
-				{ "name": "藤田 ことね", "id": "i2c" }
+				{ "name": "藤田 ことね", "id": "i2c" },
+				{ "name": "紫雲 清夏", "id": "i5b" }
 			]
 		}
 	]
