@@ -1,5 +1,5 @@
 {
-	"version": "第5弾 (1.5.1)",
+	"version": "第5弾+追加楽曲 (1.5.3)",
 	"songs": [
 		{
 			"name": "女性楽曲",
@@ -15,7 +15,8 @@
 				{ "name": "Shine!!", "id": "s4a" },
 				{ "name": "UNION!!", "id": "s4b" },
 				{ "name": "Ambitious Eve", "id": "s5a" },
-				{ "name": "Campus mode!!", "id": "s5b" }
+				{ "name": "Campus mode!!", "id": "s5b" },
+				{ "name": "流れ星キセキ", "id": "s5c" }
 			]
 		},
 		{
