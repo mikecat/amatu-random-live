@@ -1,5 +1,5 @@
 {
-	"version": "第5弾+追加楽曲 (1.5.3)",
+	"version": "S1弾 (2.0.1)",
 	"songs": [
 		{
 			"name": "女性楽曲",
@@ -16,7 +16,8 @@
 				{ "name": "UNION!!", "id": "s4b" },
 				{ "name": "Ambitious Eve", "id": "s5a" },
 				{ "name": "Campus mode!!", "id": "s5b" },
-				{ "name": "流れ星キセキ", "id": "s5c" }
+				{ "name": "流れ星キセキ", "id": "s5c" },
+				{ "name": "GO MY WAY!!", "id": "ss1a" }
 			]
 		},
 		{
@@ -33,7 +34,8 @@
 			"tags": ["woman", "man"],
 			"songs": [
 				{ "name": "なんどでも笑おう", "id": "s1f" },
-				{ "name": "VOY@GER", "id": "s1g" }
+				{ "name": "VOY@GER", "id": "s1g" },
+				{ "name": "→→→SP", "id": "ss1b" }
 			]
 		}
 	],
@@ -46,7 +48,9 @@
 				{ "name": "天海 春香", "id": "i1a" },
 				{ "name": "如月 千早", "id": "i1b" },
 				{ "name": "星井 美希", "id": "i1c" },
-				{ "name": "水瀬 伊織", "id": "i3a" }
+				{ "name": "水瀬 伊織", "id": "i3a" },
+				{ "name": "菊地 真", "id": "is1a" },
+				{ "name": "萩原 雪歩", "id": "is1b" }
 			]
 		},
 		{
