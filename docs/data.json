@@ -1,5 +1,5 @@
 {
-	"version": "S1弾 (2.0.1)",
+	"version": "S1弾Ex (2.0.2)",
 	"songs": [
 		{
 			"name": "女性楽曲",
@@ -17,7 +17,8 @@
 				{ "name": "Ambitious Eve", "id": "s5a" },
 				{ "name": "Campus mode!!", "id": "s5b" },
 				{ "name": "流れ星キセキ", "id": "s5c" },
-				{ "name": "GO MY WAY!!", "id": "ss1a" }
+				{ "name": "GO MY WAY!!", "id": "ss1a" },
+				{ "name": "ローリング△さんかく", "id": "ss1exa" }
 			]
 		},
 		{
@@ -72,7 +73,8 @@
 				{ "name": "春日 未来", "id": "i1g" },
 				{ "name": "最上 静香", "id": "i1h" },
 				{ "name": "伊吹 翼", "id": "i1i" },
-				{ "name": "真壁 瑞希", "id": "i4b" }
+				{ "name": "真壁 瑞希", "id": "i4b" },
+				{ "name": "周防 桃子", "id": "is1exa" }
 			]
 		},
 		{
